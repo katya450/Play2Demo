@@ -4,6 +4,7 @@ import models.Item;
 import play.*;
 import play.libs.Json;
 import play.mvc.*;
+import java.util.List;
 import com.avaje.ebean.*;
 import com.fasterxml.jackson.databind.JsonNode;
 
@@ -27,10 +28,13 @@ public class ShoppingListController extends Controller{
     	   return ok();
        }
        
-
-       
        public Result listItems() {	
-    	   return ok("jepa");
+    	    List<Item> items = find.all();
+
+    	   return ok(Json.toJson(items));
        }
+       
+       public static Finder<Long, Item> find = 
+			      new Finder<Long, Item>(Item.class);
 }
 
