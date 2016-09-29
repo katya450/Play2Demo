@@ -3,7 +3,7 @@
 # ~~~~
 
 GET		/shoppinglist				controllers.ShoppingListController.listItems
-POST	/shoppinglist				controllers.ShoppingListController.addItem()
+POST	/shoppinglist				controllers.ShoppingListController.addItem
 DELETE	/shoppinglist/:id			controllers.ShoppingListController.deleteItem(id: Long)
 
 # Map static resources from the /public folder to the /assets URL path
