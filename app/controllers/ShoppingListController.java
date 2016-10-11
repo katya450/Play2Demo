@@ -32,7 +32,6 @@ public class ShoppingListController extends Controller{
    public Result listItems() {	
 	   List<Item> items = find.all();
 	   return ok(Json.toJson(items));
-   }
-       
+   } 
 }
 
